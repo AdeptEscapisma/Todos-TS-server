@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "6676a87b-27c9-4654-a64e-75b7b8012f6f",
+		"name": "Todos TS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health router",
+			"item": [
+				{
+					"name": "Server check",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users router",
+			"item": [
+				{
+					"name": "Sign In",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "login",
+									"value": "test",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/user/signin",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"user",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log In",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "login",
+									"value": "test",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/user/login",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Todos router",
+			"item": [
+				{
+					"name": "Create todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "description",
+									"value": "Todo to delete",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/todos/",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"todos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/todos/",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"todos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit todo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "description",
+									"value": "An edited todo again",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/todos/edit/:id",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"todos",
+								"edit",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mark todo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/todos/mark/:id",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"todos",
+								"mark",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "BR2Yx1qtVXiNRUZFNOH-i"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mark all todos",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/todos/mark",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"todos",
+								"mark"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete todo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/todos/:id",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"todos",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "DlPxFP_GDhP-d7nuILbJS"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete marked todos",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/todos/",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"todos",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:8000/api",
+			"type": "default"
+		}
+	]
+}
